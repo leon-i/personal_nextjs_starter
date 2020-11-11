@@ -10,18 +10,18 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
-    "test-all": "npm run lint && npm run type-check && npm run test"
+    "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run type-check"
+      "pre-push": "yarn type-check"
     }
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "npm run lint",
-      "npm run format"
+      "yarn lint",
+      "yarn format"
     ]
   },
   "dependencies": {
